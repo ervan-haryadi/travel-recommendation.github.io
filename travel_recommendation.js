@@ -10,7 +10,8 @@ function searchRecommendation(event) {
   const resultDiv = document.getElementById("searchResult");
   resultDiv.innerHTML = '';
 
-  fetch("travel_recommendation_api.json")
+    // fetch(url)
+    fetch("travel_recommendation_api.json")
     .then(response => response.json())
     .then(data => {
       if (search === 'country') {
@@ -40,8 +41,8 @@ function searchRecommendation(event) {
       } else if (searchTerm) {
         searchTerm.forEach(element => {
           resultDiv.innerHTML += `<img src="${element.imageUrl}" width=100% height=50%>`;
-            resultDiv.innerHTML += `<h3>${element.name}</h3>`;
-            resultDiv.innerHTML += `<p>${element.description}</p>`;
+          resultDiv.innerHTML += `<h3>${element.name}</h3>`;
+          resultDiv.innerHTML += `<p>${element.description}</p>`;
         });
       } else {
         resultDiv.innerHTML += `Destination not found!`;
