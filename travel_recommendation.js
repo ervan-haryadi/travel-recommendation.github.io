@@ -39,7 +39,7 @@ function searchRecommendation(event) {
         });
       } else if (searchTerm) {
         searchTerm.forEach(element => {
-          resultDiv.innerHTML += `<img src="${element.imageUrl} width=100px height=50px">`;
+          resultDiv.innerHTML += `<img src="${element.imageUrl}" width=100% height=50%>`;
             resultDiv.innerHTML += `<h3>${element.name}</h3>`;
             resultDiv.innerHTML += `<p>${element.description}</p>`;
         });
